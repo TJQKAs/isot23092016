@@ -1,0 +1,50 @@
+﻿<Window x:Class="isot23092016.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:isot23092016"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label Content="Рассчет геометрических значений" HorizontalContentAlignment="Center" Background="Fuchsia"/>
+            <RadioButton x:Name="rdb1" Margin="20 10 0 0" Content="Вариант 2" Checked="RadioButton_Checked"/>
+            <TextBlock Text="Вычислить площадь S равнобедренного треугольника, в который вписана 
+                       окружность радиуса R, если известна длина La его стороны, не равная длинам 
+                       других сторон. Найти также длину L других сторон треугольника и его углы. 
+                       Проверить работу программы на равностороннем треугольнике по его площади, 
+                       которую следует вычислить заранее." 
+                       HorizontalAlignment="Stretch" TextWrapping="Wrap" FontSize="8" Margin="10 0 10 0" />
+            <RadioButton x:Name="rdb2" Margin="20 10 0 0" Content="Вариант 4" Checked="RadioButton_Checked_1"/>
+            <TextBlock Text="Вычислить S – площадь остроугольного треугольника по формуле,
+                       S=(La*Lb*sinC)/2 где La и Lb – длины сторон, а С – угол между ними. Затем вычислить 
+                       длину третьей стороны Lc, используя соотношение Lc2=La2+Lb2 -2·La·Lb·cosC и 
+                       остальные углы, используя соотношение sinA/sinC=La/Lc. Проверить 
+                       результаты для различных исходных данных по сумме углов." 
+                       HorizontalAlignment="Stretch" TextWrapping="Wrap" FontSize="8" Margin="10 0 10 0" />
+            <Button Margin="0 10 0 0 " Width="100" Height="30" Background="Lavender" Content="Рассчитать" Click="Button_Click"/>
+            <Button Margin="0 0 0 0 " Width="100" Height="30" Background="OrangeRed" Content="Очистить" Click="Button_Click_1"/>
+        </StackPanel>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="stcp1" Grid.Row="0">
+            </StackPanel>
+            <StackPanel x:Name="stcp2" Grid.Row="1">
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
